@@ -6,13 +6,13 @@ Homebrew formulae for [shelly-cli](https://github.com/tj-smith47/shelly-cli) and
 
 ```bash
 brew tap tj-smith47/tap
-brew install shelly
+brew install shelly-cli
 ```
 
 Or install directly:
 
 ```bash
-brew install tj-smith47/tap/shelly
+brew install tj-smith47/tap/shelly-cli
 ```
 
 ## Available Formulae
@@ -25,7 +25,7 @@ brew install tj-smith47/tap/shelly
 
 ```bash
 brew update
-brew upgrade shelly
+brew upgrade shelly-cli
 ```
 
 ## Issues
