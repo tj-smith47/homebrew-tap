@@ -2,23 +2,23 @@ class ShellyCli < Formula
   desc "Command-line interface for Shelly smart home devices with full BLE support"
   homepage "https://github.com/tj-smith47/shelly-cli"
   license "Apache-2.0"
-  version "0.1.4"
+  version "0.2.0"
 
   if OS.mac?
     if Hardware::CPU.intel?
-      url "https://github.com/tj-smith47/shelly-cli/releases/download/v0.1.4/shelly_darwin_amd64.tar.gz"
-      sha256 "847e3bed78dcd23d7b7fb0eb97009baed831321cd202d545af9f6c7f2bcbe59d"
+      url "https://github.com/tj-smith47/shelly-cli/releases/download/v0.2.0/shelly_darwin_amd64.tar.gz"
+      sha256 "7a03dafa0776c615ca60afee7c7bf16567aa87d25307e4aff7441798514ca593"
     elsif Hardware::CPU.arm?
-      url "https://github.com/tj-smith47/shelly-cli/releases/download/v0.1.4/shelly_darwin_arm64.tar.gz"
-      sha256 "2129950a1e4395c8da9bb889f521dcb65b1d4bfebedc304a0ca4d1f0b9add29f"
+      url "https://github.com/tj-smith47/shelly-cli/releases/download/v0.2.0/shelly_darwin_arm64.tar.gz"
+      sha256 "6ebf65c54e97c796402736ace9b4bb58195a10b43b2bd04d908f7238e83c26eb"
     end
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/tj-smith47/shelly-cli/releases/download/v0.1.4/shelly_linux_amd64.tar.gz"
-      sha256 "537ce9915d1a84e46b53d31f08d54c7fb5cb28fec4ce64a1eeda9456ebc5f058"
+      url "https://github.com/tj-smith47/shelly-cli/releases/download/v0.2.0/shelly_linux_amd64.tar.gz"
+      sha256 "aa5af40eb77bd7af1bc3080477634d495d963c38220c8bccca8e6593bb52005b"
     elsif Hardware::CPU.arm?
-      url "https://github.com/tj-smith47/shelly-cli/releases/download/v0.1.4/shelly_linux_arm64.tar.gz"
-      sha256 "7931288f3d09e2b1b95265f8dacfb47d570c98c5d63600fb831cdc147b7778b1"
+      url "https://github.com/tj-smith47/shelly-cli/releases/download/v0.2.0/shelly_linux_arm64.tar.gz"
+      sha256 "89ad09e0fc55bf39275436008c917863fdb4ef5d207330503b1a99e607d96d5f"
     end
   end
 
