@@ -2,23 +2,23 @@ class Cfgd < Formula
   desc "Declarative, GitOps-style machine configuration management"
   homepage "https://github.com/tj-smith47/cfgd"
   license "Apache-2.0"
-  version "0.2.9"
+  version "0.2.10"
 
   if OS.mac?
     if Hardware::CPU.intel?
-      url "https://github.com/tj-smith47/cfgd/releases/download/v0.2.9/cfgd-0.2.9-darwin-x86_64.tar.gz"
-      sha256 "3f2dcf9a7463757e38746a863afd0c6b403bd7a9ae3f009ddcc209b01f477977"
+      url "https://github.com/tj-smith47/cfgd/releases/download/v0.2.10/cfgd-0.2.10-darwin-x86_64.tar.gz"
+      sha256 "71a1eeba0d07411fdec592bb42919a17e6eb4dc52421b7f05ba94e2f712046d0"
     elsif Hardware::CPU.arm?
-      url "https://github.com/tj-smith47/cfgd/releases/download/v0.2.9/cfgd-0.2.9-darwin-aarch64.tar.gz"
-      sha256 "5e01b8a3d1ffd1d90666d584138f8290d725704bd553596d52e381a65f502432"
+      url "https://github.com/tj-smith47/cfgd/releases/download/v0.2.10/cfgd-0.2.10-darwin-aarch64.tar.gz"
+      sha256 "6c1e9df3e091a9be4531ae7fd6e8eb77d6060c4439aa10e7537f96cf75568a01"
     end
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/tj-smith47/cfgd/releases/download/v0.2.9/cfgd-0.2.9-linux-x86_64.tar.gz"
-      sha256 "1e4425e0d53dfe0a330c134fa6607ef02d99a6ed84f13298a9f2e988dda60744"
+      url "https://github.com/tj-smith47/cfgd/releases/download/v0.2.10/cfgd-0.2.10-linux-x86_64.tar.gz"
+      sha256 "5fb784f50aa6f036d46aaf0625ea238bc06df9e18ed12fb7e0ee0ea06e835b2f"
     elsif Hardware::CPU.arm?
-      url "https://github.com/tj-smith47/cfgd/releases/download/v0.2.9/cfgd-0.2.9-linux-aarch64.tar.gz"
-      sha256 "3a242af2feaaf31c08ce9860e46808dbdbbee28a0da3e716879914273f43e07c"
+      url "https://github.com/tj-smith47/cfgd/releases/download/v0.2.10/cfgd-0.2.10-linux-aarch64.tar.gz"
+      sha256 "a3dda4ea9349c31fbc0db6ea54284b3741a8bb5c1dc6b02dc5d486571ddaf144"
     end
   end
 
