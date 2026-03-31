@@ -7,18 +7,18 @@ class Cfgd < Formula
   if OS.mac?
     if Hardware::CPU.intel?
       url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.0/cfgd-0.3.0-darwin-x86_64.tar.gz"
-      sha256 "121e8a4be84cd6ca9f8ec75f100ea02cc2192368a2887e1d1887d1b55b197798"
+      sha256 "0a3635f37a718a771edeb7b5aba06fd602173da714866f4dee8e11fc614e7744"
     elsif Hardware::CPU.arm?
       url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.0/cfgd-0.3.0-darwin-aarch64.tar.gz"
-      sha256 "60e3aed31cf105f1984eb0c4cbbd290b3375bd891367adb0377f24dff09e8123"
+      sha256 "cc7c39806e197029b3d4d10ee57cc3a70160c6e384c0a1acc78def8bafe93f75"
     end
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.0/cfgd-0.3.0-linux-x86_64.tar.gz"
-      sha256 "44d2cf1b759862eecaa66317f58136b2ffa3250bdf7c927a6c4cf276a276fa72"
+      sha256 "60069338e91219e6fe316dbb76415d61370c23c8acebb13c123046f7914d75a8"
     elsif Hardware::CPU.arm?
       url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.0/cfgd-0.3.0-linux-aarch64.tar.gz"
-      sha256 "be276346de84e115c48f9cefe0c259fc9532ae5de6607b6f4779960675879317"
+      sha256 "09f088f0e43da5a623ce1948f631569024b6064298452fd3e726680147f39bab"
     end
   end
 
