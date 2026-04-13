@@ -7,7 +7,7 @@ class Cfgd < Formula
   homepage "https://github.com/tj-smith47/cfgd"
   license "MIT"
 
-  version "0.3.3"
+  version "0.3.4"
 
 
   def install
