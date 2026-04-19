@@ -9,28 +9,28 @@ class Cfgd < Formula
 
   version "0.3.5"
 
-  # platform: x86_64-pc-windows-msvc
-  url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-windows-amd64.zip"
-
-  sha256 "27330077e85311b1cc8e33c01c9330d1c9ceb98a00fbf8987885fabbfda4da36"
   # platform: aarch64-pc-windows-msvc
   url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-windows-arm64.zip"
 
-  sha256 "55aa1d4c8248efa453752c37927e36c0ade976692bd7babd7716526abf7be7ca"
-  on_macos do
-    on_intel do
-      url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-darwin-amd64.tar.gz"
+  sha256 "db86d0aacf36bafe0d2da2e0871744df59dd3898aabebfb1102a5fafe87160c8"
+  # platform: x86_64-pc-windows-msvc
+  url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-windows-amd64.zip"
 
-      sha256 "c443dca40f7121fb885507aeab18ffd5bbe74a43596329e2ee41c234fec1299a"
+  sha256 "8e64bbe1763f69442cf2cfffbae9f40c7e5827dd0f7d5dc66e302fb81c22a0e9"
+  on_macos do
+    on_arm do
+      url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-darwin-arm64.tar.gz"
+
+      sha256 "ba997d73e298f0ab1309d7326191d89d01d009a61e5b638438427a4a0c0c2fb9"
 
       def install
         bin.install "cfgd"
       end
     end
-    on_arm do
-      url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-darwin-arm64.tar.gz"
+    on_intel do
+      url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-darwin-amd64.tar.gz"
 
-      sha256 "0cc9cb3c0225597d753435c966c7a41883823316e8f661164b9f442d2e1c264e"
+      sha256 "a42c5dbac83dec26e768fb19b9e40f653bb0e27fa2773e18736b2e4c41cb17f7"
 
       def install
         bin.install "cfgd"
@@ -41,7 +41,7 @@ class Cfgd < Formula
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-linux-amd64.tar.gz"
 
-      sha256 "cd9666bd1d7ed3b948412a16c2505722c151b037ab7e9b9c7029c81f6137f790"
+      sha256 "6aa4e1d1a02f9c8f456f888bf3ec797aadefd3f03f4cbc2601629896ffde8f01"
 
       def install
         bin.install "cfgd"
@@ -50,7 +50,7 @@ class Cfgd < Formula
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-linux-arm64.tar.gz"
 
-      sha256 "1df32c2bf0dab4de4f258bf94c4ce8384da51b11ebaada622ae8d19fc2ff7e19"
+      sha256 "43acff5024659b4e4b86623b23c64d95a2c48e122f0efc6dacd18bbb963f9395"
 
       def install
         bin.install "cfgd"
