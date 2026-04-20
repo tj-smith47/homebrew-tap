@@ -18,19 +18,19 @@ class Anodizer < Formula
 
   sha256 "cdf82fb3e5bbc5717285a4e151fa52f9129f638343b9e8c248f327b0c6fab5be"
   on_macos do
-    on_arm do
-      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-arm64.tar.gz"
+    on_intel do
+      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-amd64.tar.gz"
 
-      sha256 "02124a3072119f3363e64960cac47f3e1c0c380ef29075b3e908d4637064adfa"
+      sha256 "67735eaa2665ad2985dc00c296e70da4fda946054301934013bb983e8742f0ef"
 
       def install
         bin.install "anodizer"
       end
     end
-    on_intel do
-      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-amd64.tar.gz"
+    on_arm do
+      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-arm64.tar.gz"
 
-      sha256 "67735eaa2665ad2985dc00c296e70da4fda946054301934013bb983e8742f0ef"
+      sha256 "02124a3072119f3363e64960cac47f3e1c0c380ef29075b3e908d4637064adfa"
 
       def install
         bin.install "anodizer"
