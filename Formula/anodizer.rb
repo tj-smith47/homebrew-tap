@@ -9,14 +9,14 @@ class Anodizer < Formula
 
   version "0.1.0"
 
-  # platform: x86_64-pc-windows-msvc
-  url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-windows-amd64.zip"
-
-  sha256 "a263ab37fece034eafd741ae02cc5384a874a6fe452fa542bb43941717be4aa5"
   # platform: aarch64-pc-windows-msvc
   url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-windows-arm64.zip"
 
   sha256 "cdf82fb3e5bbc5717285a4e151fa52f9129f638343b9e8c248f327b0c6fab5be"
+  # platform: x86_64-pc-windows-msvc
+  url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-windows-amd64.zip"
+
+  sha256 "a263ab37fece034eafd741ae02cc5384a874a6fe452fa542bb43941717be4aa5"
   on_macos do
     on_intel do
       url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-amd64.tar.gz"
@@ -38,19 +38,19 @@ class Anodizer < Formula
     end
   end
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-linux-arm64.tar.gz"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-linux-amd64.tar.gz"
 
-      sha256 "39a294aa0c7610de1a02aa851694e20eacb6235e1557f1ac7f0bcec6ac5a894a"
+      sha256 "a866349e13ec986290c2d0731c9cfab77f0964039203e29a1bc59565c83f318e"
 
       def install
         bin.install "anodizer"
       end
     end
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-linux-amd64.tar.gz"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-linux-arm64.tar.gz"
 
-      sha256 "a866349e13ec986290c2d0731c9cfab77f0964039203e29a1bc59565c83f318e"
+      sha256 "39a294aa0c7610de1a02aa851694e20eacb6235e1557f1ac7f0bcec6ac5a894a"
 
       def install
         bin.install "anodizer"
