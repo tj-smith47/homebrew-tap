@@ -9,14 +9,14 @@ class Cfgd < Formula
 
   version "0.3.5"
 
-  # platform: x86_64-pc-windows-msvc
-  url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-windows-amd64.zip"
-
-  sha256 "fcc305a85fb9835e9dc5472af7025f086b5435cdf1a741f88f6d755990a5e86e"
   # platform: aarch64-pc-windows-msvc
   url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-windows-arm64.zip"
 
   sha256 "60f912d01d599e5edd72b6db8bd500cc62c8cd86e61ca0fb647b51144ab5307b"
+  # platform: x86_64-pc-windows-msvc
+  url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-windows-amd64.zip"
+
+  sha256 "fcc305a85fb9835e9dc5472af7025f086b5435cdf1a741f88f6d755990a5e86e"
   on_macos do
     on_arm do
       url "https://github.com/tj-smith47/cfgd/releases/download/v0.3.5/cfgd-0.3.5-darwin-arm64.tar.gz"
