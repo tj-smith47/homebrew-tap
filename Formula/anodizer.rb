@@ -9,14 +9,14 @@ class Anodizer < Formula
 
   version "0.1.0"
 
-  # platform: x86_64-pc-windows-msvc
-  url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-windows-amd64.zip"
-
-  sha256 "21211f7fe46e453cf03ab143bf90f896d7844c29baddb309fe93b66bb1a42516"
   # platform: aarch64-pc-windows-msvc
   url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-windows-arm64.zip"
 
   sha256 "e13926f7c0515edfa47b237050e439ad3e5ad255bfec8487f9442d0363997088"
+  # platform: x86_64-pc-windows-msvc
+  url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-windows-amd64.zip"
+
+  sha256 "21211f7fe46e453cf03ab143bf90f896d7844c29baddb309fe93b66bb1a42516"
   on_macos do
     on_arm do
       url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-arm64.tar.gz"
