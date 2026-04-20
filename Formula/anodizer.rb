@@ -18,15 +18,6 @@ class Anodizer < Formula
 
   sha256 "cdf82fb3e5bbc5717285a4e151fa52f9129f638343b9e8c248f327b0c6fab5be"
   on_macos do
-    on_arm do
-      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-arm64.tar.gz"
-
-      sha256 "02124a3072119f3363e64960cac47f3e1c0c380ef29075b3e908d4637064adfa"
-
-      def install
-        bin.install "anodizer"
-      end
-    end
     on_intel do
       url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-amd64.tar.gz"
 
@@ -36,21 +27,30 @@ class Anodizer < Formula
         bin.install "anodizer"
       end
     end
-  end
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-linux-arm64.tar.gz"
+    on_arm do
+      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-arm64.tar.gz"
 
-      sha256 "39a294aa0c7610de1a02aa851694e20eacb6235e1557f1ac7f0bcec6ac5a894a"
+      sha256 "02124a3072119f3363e64960cac47f3e1c0c380ef29075b3e908d4637064adfa"
 
       def install
         bin.install "anodizer"
       end
     end
+  end
+  on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-linux-amd64.tar.gz"
 
       sha256 "a866349e13ec986290c2d0731c9cfab77f0964039203e29a1bc59565c83f318e"
+
+      def install
+        bin.install "anodizer"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-linux-arm64.tar.gz"
+
+      sha256 "39a294aa0c7610de1a02aa851694e20eacb6235e1557f1ac7f0bcec6ac5a894a"
 
       def install
         bin.install "anodizer"
