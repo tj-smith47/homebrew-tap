@@ -9,19 +9,19 @@ class Anodizer < Formula
 
   version "0.1.0"
 
-  # platform: aarch64-pc-windows-msvc
-  url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-windows-arm64.zip"
-
-  sha256 "e13926f7c0515edfa47b237050e439ad3e5ad255bfec8487f9442d0363997088"
   # platform: x86_64-pc-windows-msvc
   url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-windows-amd64.zip"
 
-  sha256 "21211f7fe46e453cf03ab143bf90f896d7844c29baddb309fe93b66bb1a42516"
+  sha256 "a263ab37fece034eafd741ae02cc5384a874a6fe452fa542bb43941717be4aa5"
+  # platform: aarch64-pc-windows-msvc
+  url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-windows-arm64.zip"
+
+  sha256 "cdf82fb3e5bbc5717285a4e151fa52f9129f638343b9e8c248f327b0c6fab5be"
   on_macos do
     on_arm do
       url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-arm64.tar.gz"
 
-      sha256 "393061f5369424efe8a5f3ac9cc36d94b5b3bced6e13921eb0c298813e8f3609"
+      sha256 "02124a3072119f3363e64960cac47f3e1c0c380ef29075b3e908d4637064adfa"
 
       def install
         bin.install "anodizer"
@@ -30,7 +30,7 @@ class Anodizer < Formula
     on_intel do
       url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-darwin-amd64.tar.gz"
 
-      sha256 "e7be3c26dcc56e04fbaec9fdeae1b903162a12b1f81123c817d16f675109b28b"
+      sha256 "67735eaa2665ad2985dc00c296e70da4fda946054301934013bb983e8742f0ef"
 
       def install
         bin.install "anodizer"
@@ -41,7 +41,7 @@ class Anodizer < Formula
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-linux-arm64.tar.gz"
 
-      sha256 "d77ba13c3a3608dc0520a3d9ff16b4a9dc12a9fcb78fd0ca0797a5174e78b97f"
+      sha256 "39a294aa0c7610de1a02aa851694e20eacb6235e1557f1ac7f0bcec6ac5a894a"
 
       def install
         bin.install "anodizer"
@@ -50,7 +50,7 @@ class Anodizer < Formula
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.0/anodizer-0.1.0-linux-amd64.tar.gz"
 
-      sha256 "6f1572971cd86ca892fb0d00981b4300717d4ab29d470fa6dae86e89fe86c19f"
+      sha256 "a866349e13ec986290c2d0731c9cfab77f0964039203e29a1bc59565c83f318e"
 
       def install
         bin.install "anodizer"
