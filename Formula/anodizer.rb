@@ -7,30 +7,30 @@ class Anodizer < Formula
   homepage "https://github.com/tj-smith47/anodizer"
   license "MIT"
 
-  version "0.1.1"
+  version "0.5.0"
 
   # platform: x86_64-pc-windows-msvc
-  url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.1/anodizer-0.1.1-windows-amd64.zip"
+  url "https://github.com/tj-smith47/anodizer/releases/download/v0.5.0/anodizer-0.5.0-windows-amd64.zip"
 
-  sha256 "d0177ea8564f6e33a971ab54097fb9efe07eb4bb81e9e3ad535801c0b96bb77c"
+  sha256 "622e6e3a566eea8b5e3b5a0201a59e1fd94c4d4e137009bd5073380e277bd90e"
   # platform: aarch64-pc-windows-msvc
-  url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.1/anodizer-0.1.1-windows-arm64.zip"
+  url "https://github.com/tj-smith47/anodizer/releases/download/v0.5.0/anodizer-0.5.0-windows-arm64.zip"
 
-  sha256 "acd051e0692e545a26e406f51795da922210efa5183d5c862a75c2f3634ec051"
+  sha256 "5a4ee930926f6f039c55f3e63f575f34d59f5e923c82ad220cdcc3079c34d67f"
   on_macos do
     on_intel do
-      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.1/anodizer-0.1.1-darwin-amd64.tar.gz"
+      url "https://github.com/tj-smith47/anodizer/releases/download/v0.5.0/anodizer-0.5.0-darwin-amd64.tar.gz"
 
-      sha256 "c2c7eb77bef8320ed4211f5caae0cf36a9928bf9e5e60f04c255a5ccf3c3631c"
+      sha256 "6853d685ce68a863a615c41334ec0d7580ee4b163d4c82ac5ec0bb246c2647fd"
 
       def install
         bin.install "anodizer"
       end
     end
     on_arm do
-      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.1/anodizer-0.1.1-darwin-arm64.tar.gz"
+      url "https://github.com/tj-smith47/anodizer/releases/download/v0.5.0/anodizer-0.5.0-darwin-arm64.tar.gz"
 
-      sha256 "a7d9485aa95a71ae8b6733493f40e157d90ded0172fe24997966adc9738ac42e"
+      sha256 "fbf837c818933097fb853f972b7afc346631c8bae40fb1b4dba5ef9390094fcb"
 
       def install
         bin.install "anodizer"
@@ -38,19 +38,19 @@ class Anodizer < Formula
     end
   end
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.1/anodizer-0.1.1-linux-arm64.tar.gz"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tj-smith47/anodizer/releases/download/v0.5.0/anodizer-0.5.0-linux-amd64.tar.gz"
 
-      sha256 "e414ee6801fcd92090c21946fe2cd32d4317397e6fb766fba22c7bdf69959220"
+      sha256 "cd40473a4260234805da38bd9dd05511a1d254566bd8e58914643b190a1aed23"
 
       def install
         bin.install "anodizer"
       end
     end
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tj-smith47/anodizer/releases/download/v0.1.1/anodizer-0.1.1-linux-amd64.tar.gz"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tj-smith47/anodizer/releases/download/v0.5.0/anodizer-0.5.0-linux-arm64.tar.gz"
 
-      sha256 "61e123af6ab72827d1592f692008a7efc99caa982440ec0d29d96fb3d653c0ba"
+      sha256 "1bfaaed90cc2c9dead6d3e2e87d76ab80946f0d2332ad1d2efd3a3b0076a0d44"
 
       def install
         bin.install "anodizer"
@@ -58,7 +58,20 @@ class Anodizer < Formula
     end
   end
 
+  depends_on "git"
+
+  def post_install
+    generate_completions_from_executable(bin/"anodizer", "completion")
+  end
+
   test do
     system "#{bin}/anodizer", "--version"
+  end
+
+  def caveats
+    <<~EOS
+      Run `anodizer init` to scaffold a config in your repo.
+
+    EOS
   end
 end
