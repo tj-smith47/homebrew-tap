@@ -12,12 +12,12 @@ cask "anodizer" do
 
   on_linux do
     on_arm do
-      sha256 "9ae6ca770630ed8d6ccfc6b55d94c2a348ea0309757a7b6520f1eb561ad8ce07"
+      sha256 "e240f200f2b9cc91595500d5074fca4593c5bdf848323d3e645d121f264c9e5f"
       url "https://github.com/tj-smith47/anodizer/releases/download/v#{version}/anodizer-#{version}-linux-arm64.tar.gz",
         verified: "github.com/tj-smith47/anodizer/releases/download"
     end
     on_intel do
-      sha256 "96da1cd8c97ae360ae5d8e56309483a5581a5eda8e11c38e153f6cd3bdc0acb4"
+      sha256 "e06ec4aa01b3627ae50420f0fafd2ec74be3f1ed797098f63e61e855ac647032"
       url "https://github.com/tj-smith47/anodizer/releases/download/v#{version}/anodizer-#{version}-linux-amd64.tar.gz",
         verified: "github.com/tj-smith47/anodizer/releases/download"
     end
@@ -25,12 +25,12 @@ cask "anodizer" do
 
   on_macos do
     on_arm do
-      sha256 "929425902c71b716bbaec9f31ae9ba07e4de70c9b5a71088851b5b881ef8fd6e"
+      sha256 "389dd65eff9b724bd3d73939dac1c5562e3190d6ddea0e34a3a7fc653e5ff1b1"
       url "https://github.com/tj-smith47/anodizer/releases/download/v#{version}/anodizer-#{version}-darwin-arm64.tar.gz",
         verified: "github.com/tj-smith47/anodizer/releases/download"
     end
     on_intel do
-      sha256 "7a110e4d07b0947096edaae80c3f275fb1f086f282c36f5aebef838eb33dcdd9"
+      sha256 "5780d58872a58275024cdec0ed712e1c726a305cfaa126c985670bfc969cf13e"
       url "https://github.com/tj-smith47/anodizer/releases/download/v#{version}/anodizer-#{version}-darwin-amd64.tar.gz",
         verified: "github.com/tj-smith47/anodizer/releases/download"
     end
